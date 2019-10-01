@@ -1,0 +1,12 @@
+#645題
+class Solution:
+   def findErrorNums(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        hashs = [0] * len(nums)        #holder[0] * nums字串數 = holder[0,0,0,0,0]...
+        missing = -1
+        for i in range(len(nums)):
+        hashs [nums[i]-1]+=1
+        return[hashs.index(2)+1,hashs.index(0)+1]
