@@ -1,0 +1,9 @@
+第六題
+
+def modulus(n):
+    if n%1==0 :
+        return n % 2
+    else:
+        return -1
+
+n%1==0  →  n除以1的餘數為0 ， 代表n為整數
