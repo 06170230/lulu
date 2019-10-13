@@ -1,1 +1,38 @@
-## Insertion Sort ##
+## QuickSort ##
+
+def quick_sort(list): 
+    smaller = []
+    bigger = []
+    
+    if len(list) <= 1:
+        return list
+​
+    else:
+        key = list[0] #第一個數為key值
+        for i in list:
+            if i < key: #比key值小的數
+                smaller.append(i)
+            elif i > key: #比key值大的數
+                bigger.append(i)
+         
+    smaller = quick_sort(smaller)
+    bigger = quick_sort(bigger)
+    return smaller + [key] + bigger
+
+
+
+In [19]:
+
+
+list = [9,4,5,2,7,6,17,98,50]
+
+
+
+In [20]:
+
+
+quick_sort(list)
+
+
+Out[20]:
+[2, 4, 5, 6, 7, 9, 17, 50, 98]
