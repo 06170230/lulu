@@ -21,6 +21,7 @@ smaller = [4]
 第一層分層完結果為 [1,3,5,7,4]
 第二層分層完結果為 [1,3,4,5,7]
 ![image](https://github.com/06170230/lulu/blob/master/image/quicksort.jpg)
+
 ## QuickSort程式碼##
 In [23]:
 
