@@ -23,45 +23,5 @@ smaller = [4]
 ![image](https://github.com/06170230/lulu/blob/master/image/quicksort.jpg)
 
 ## QuickSort程式碼##
-In [23]:
 
-
-def quick_sort(list): 
-    smaller = []
-    bigger = []
-    
-    if len(list) <= 1:
-        return list
-​
-    else:
-        key = list[0] #第一個數為key值
-        for i in list:
-            if i < key: #比key值小的數
-                smaller.append(i)
-            elif i > key: #比key值大的數
-                bigger.append(i)
-         
-    smaller = quick_sort(smaller)
-    bigger = quick_sort(bigger)
-    return smaller + [key] + bigger
-
-
-
-In [24]:
-
-
-list = [3,5,7,4,1]
-
-
-
-In [25]:
-
-
-quick_sort(list)
-
-
-Out[25]:
-[1, 3, 4, 5, 7]
-
-
-
+![image](https://github.com/06170230/lulu/blob/master/image/quicksort%E7%A8%8B%E5%BC%8F%E7%A2%BC.PNG)
