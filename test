@@ -1,0 +1,34 @@
+ID1,ID2,day,q,w,e,r,t,y,u,i,o,p,a,s = [],[],[],[],[],[],[],[],[],[],[],[],[],[],[]
+for name in tqdm_notebook(os.listdir("C://Users/Lu/Desktop/德天/")):
+    try:
+        for name2 in os.listdir("C://Users/Lu/Desktop/德天/"+str(name)):
+            if 'epochs' in name2:
+                date = name2[5:9]
+                with open("C://Users/Lu/Desktop/德天/"+str(name)+'/'+str(name2),"rb") as fin:
+                    content = json.load(fin)
+                    if len(content) ==0:
+                        print(name , name2)
+                    try:
+                        for m in range(len(content)):
+                            ID.append(name)
+                            ID2.append(content[m]['summaryId'])
+                            day.append(date)
+                            q.append(content[m]['activityType'])
+                            w.append(content[m]['activeKilocarlories'])
+                            e.append(content[m]['steps'])
+                            r.append(content[m]['distanceInMeters'])
+                            t.append(content[m]['durationInSeconds'])
+                            y.append(content[m]['activeTimeInSeconds'])
+                            u.appemd(content[m]['startTimeInSeconds'])
+                            i.append(content[m]['startTimeOffsetInSecond'])
+                            o.append(content[m]['met'])
+                            p.append(content[m]['intensity'])
+                            a.append(content[m]['meanMotionIntensity'])
+                            s.append(content[m]['maxMotionIntensity'])
+                    except:
+                        pass
+    except:
+        pass
+df_epochs = pd.DataFrame(list(zip(ID,ID2,day,q,w,e,r,t,y,u,i,o,p,a,s)), columns=['id','summaryId','date','activityType','activeKilocarlories','steps','distanceInMeters','durationInSeconds','activeTimeInSeconds','startTimeInSeconds','startTimeOffsetInSecond','met','intensity','meanMotionIntensity','maxMotionIntensity'])
+df_epochs = df_epochs.sort_values(['id','date']).reset_index(drop=True)                        
+df_epochs.to_csv('C://Users/Lu/Desktop/德天/epochs.csv' )        
