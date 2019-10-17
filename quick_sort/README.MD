@@ -28,3 +28,6 @@ smaller = [4]
 
 第一層分層完結果為 [1,3,5,7,4]
 第二層分層完結果為 [1,3,4,5,7]
+
+## QuickSort流程圖 ##
+<img src = "https://github.com/06170230/lulu/blob/master/image/流程圖.jpg" height =500 weight = 500>
