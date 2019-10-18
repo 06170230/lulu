@@ -1,18 +1,18 @@
+## Leetcode965 ##
 class Solution(object):
     def isUnivalTree(self, root):
         vals = []
-
         def dfs(node):
             if node:
                 vals.append(node.val)
                 dfs(node.left)
                 dfs(node.right)
-
         dfs(root)
         return len(set(vals)) == 1
         
-        DFS的基本思路
+       ## DFS的基本思路 ##
 深度优先遍历图的方法是:从图中某顶点vv出发：
+
 （1）访问顶点vv；
 
 （2）依次从vv的未被访问的邻接点(adjacentadjacent)出发，对图进行深度优先遍历；直至图中和vv有路径相通的顶点都被访问；
