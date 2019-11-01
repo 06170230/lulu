@@ -1,4 +1,5 @@
-實作概念
+實作概念:
+
 把整個linked-list的實作分成兩個類別（class），一個是包含了資料及指標兩個屬性的節點（class ListNode），
 另一個則是定義出各種資料結構操作的list本身（class SingleLinkedList）。
 ``` py
