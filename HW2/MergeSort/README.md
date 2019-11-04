@@ -129,6 +129,7 @@ list=[1,5,9,7,2,6,15,20,10,11]
 mergeSort(list)
 list
 ```
+[程式碼參考處](https://runestone.academy/runestone/books/published/pythonds/SortSearch/TheMergeSort.html)
 
 3.流程圖
 ---
