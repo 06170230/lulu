@@ -1,7 +1,7 @@
 ####MergeSort 做法、思考方式、程式碼、流程圖####
 ===
 
-* 1.利用的方法 Divide-and-Conquer
+1.利用的方法 Divide-and-Conquer
 ---
 Divide and conquer中文翻作分治法，概念如字面上的意義，將問題先切分成小問題後再解決，再將結果合併求出原始問題的答案。
 
@@ -17,7 +17,7 @@ Divide and conquer中文翻作分治法，概念如字面上的意義，將問�
 
 [資料來源](https://emn178.pixnet.net/blog/post/87739443-divide-and-conquer)
 
-* 2.做法
+2.做法
 ----------
 一開始真的不會做雖然有頭緒但想不到要怎麼用程式碼呈現所以上網參考了一下其他人的程式碼
    
@@ -130,6 +130,6 @@ mergeSort(list)
 list
 ```
 
-* 3.流程圖
+3.流程圖
 ---
 <img src = "https://github.com/06170230/lulu/blob/master/image/mergesort.jpg" height =750 weight = 750>
