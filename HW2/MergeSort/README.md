@@ -1,7 +1,10 @@
 1. 利用的方法 Divide-and-Conquer
-............
-2. 做法
+----
 
+2. 做法
+----
+
+一開始真的不會做雖然有頭緒但想不到要怎麼用程式碼呈現所以上網參考了一下其他人的程式碼
    
 先定義mergeSort
 
@@ -28,10 +31,16 @@ def mergeSort(list):
         j=0
         a=0
         
+  # 下面兩段很重要一開始忘了呼叫mergeSort就跑迴圈了根本沒有意義! ###
+        
+        mergeSort(left)
+        mergeSort(right)   
+        
         while i < len(left) and j < len(right):
             if left[i] <= right[j]:
                 list[a]=left[i]
                 i=i+1
+                a=a+1
             else:
                 list[a]=right[j]
                 j=j+1
@@ -40,3 +49,29 @@ list=[1,5,9,7,2,6,15,20,10,11]
 mergeSort(list)
 list
 ```
+以上是我第一次做的程式碼，但跑出來的結果是 [1, 2, 2, 2, 2, 6, 15, 20, 10, 11]
+
+但是我自己想了好久實在是想不到我到底漏了甚麼，為什麼結果跟我想像的不一樣
+
+後來發現如果照我上面打的程式碼的想法在書上寫一次
+
+★發現資料沒有辦法完全填完 i、j 都比完以後還剩下最後一個最大的值，但我的程式碼還沒有把它加進去★
+
+所以當"i""j"其中一邊小於"left"或"right"，代表有一邊已經填完了，只要再加上剩下"i"或"j"就能完成
+
+我們加上這段程式碼
+
+```py
+        while i < len(left):
+            list[a]=left[i]
+            i=i+1
+            a=a+1
+
+        while j < len(right):
+            list[a]=right[j]
+            j=j+1
+            a=a+1
+```
+結果為[1, 2, 5, 6, 7, 9, 10, 11, 15, 20]
+
+成功了！
