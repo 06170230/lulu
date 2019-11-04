@@ -4,13 +4,17 @@
 
    
 先定義mergeSort
+
 然後把資料分成三大部分----分別是  mid(中點)、left(左半部)、right(右半部)
+
 接著設三個變數 i、j、a 如果 i、j 沒有超過left跟right的長度就可以比較i、j
 
 ---
 建立一個迴圈
+
 假如left[i]<=right[j]，就把left[i]加進list[a]之中
 i輪到下一個 ---> i=i+1
+
 如果right[j]<=left[i]，就把right[j]加進list[a]之中
 j輪到下一個 ---> j=j+1
 
