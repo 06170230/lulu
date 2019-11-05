@@ -81,6 +81,7 @@ heaptree最大堆積的largest放到end處後，再繼續做比較把下一個la
         siftdown(list, 0, end)
         end = end-1
 ```
+<img src = "https://github.com/06170230/lulu/blob/master/image/end.jpg" height =300 weight = 300>
 
 3.完整程式碼
 -----
@@ -124,3 +125,8 @@ list = [6,2,4,9,1,5,8]
 heapsort(list)
 print(list)
 ```
+
+4.流程圖
+----
+
+<img src = "https://github.com/06170230/lulu/blob/master/image/heapsort%E6%B5%81%E7%A8%8B%E5%9C%96.jpg" height =1000 weight = 1000>
