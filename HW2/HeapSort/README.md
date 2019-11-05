@@ -125,6 +125,7 @@ list = [6,2,4,9,1,5,8]
 heapsort(list)
 print(list)
 ```
+[程式碼參考於youtube上一個教寫程式的人](https://www.youtube.com/channel/UCxP77kNgVfiiG6CXZ5WMuAQ)
 
 4.流程圖
 ----
