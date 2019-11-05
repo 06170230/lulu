@@ -90,7 +90,8 @@ list
 
 成功了！
 
-完整的程式碼貼在這邊
+3.完整的程式碼
+---
 
 ```py
 def mergeSort(list):
@@ -131,6 +132,6 @@ list
 ```
 [程式碼參考處](https://runestone.academy/runestone/books/published/pythonds/SortSearch/TheMergeSort.html)
 
-3.流程圖
+4.流程圖
 ---
 <img src = "https://github.com/06170230/lulu/blob/master/image/mergesort.jpg" height =750 weight = 750>
