@@ -116,12 +116,12 @@ def mergeSort(list):
                 j=j+1
                 a=a+1
         #下面這兩個while很重要，如果沒有加上來i、j比大小結束後剩下的最大值就沒有被加上來            
-        while i < len(left):
+        while i < len(left) and j== len(right):
             list[a]=left[i]
             i=i+1
             a=a+1
 
-        while j < len(right):
+        while j < len(right) and i== len(left):
             list[a]=right[j]
             j=j+1
             a=a+1
