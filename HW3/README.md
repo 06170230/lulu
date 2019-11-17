@@ -1,59 +1,33 @@
 ```py
 class Node:
-    def __init__(self, val):
-        self.val = val
-        self.leftChild = None
-        self.rightChild = None
+    def __init__(self, item):
+        self.val = item
+        self.left = None
+        self.right = None
+
+class BinaryTree:
     
-    def get(self):
-        return self.val
-    
-    def set(self, val):
-        self.val = val
-        
-    def getChildren(self):
-        children = []
-        if(self.leftChild != None):
-            children.append(self.leftChild)
-        if(self.rightChild != None):
-            children.append(self.rightChild)
-        return children
-        
-class BST:
     def __init__(self):
-        self.root = None
-
-    def setRoot(self, val):
-        self.root = Node(val)
-
-    def insert(self, val):
-        if(self.root is None):
-            self.setRoot(val)
-        else:
-            self.insertNode(self.root, val)
-
-    def insertNode(self, currentNode, val):
-        if(val <= currentNode.val):
-            if(currentNode.leftChild):
-                self.insertNode(currentNode.leftChild, val)
-            else:
-                currentNode.leftChild = Node(val)
-        elif(val > currentNode.val):
-            if(currentNode.rightChild):
-                self.insertNode(currentNode.rightChild, val)
-            else:
-                currentNode.rightChild = Node(val)
-
-    def find(self, val):
-        return self.findNode(self.root, val)
-
-    def findNode(self, currentNode, val):
-        if(currentNode is None):
+        self.head = Node(None)
+        
+    def search(self, item):
+        if self.head.val is None:
             return False
-        elif(val == currentNode.val):
-            return True
-        elif(val < currentNode.val):
-            return self.findNode(currentNode.leftChild, val)
         else:
-            return self.findNode(currentNode.rightChild, val)
-          ```
+            return self.__search_node(self.head, item)
+
+    def __search_node(self, cur, item):
+        if cur.val == item:
+            return True
+        else:
+            if cur.val >= item:
+                if cur.left is not None:
+                    return self.__search_node(cur.left, item)
+                else:
+                    return False
+            else:
+                if cur.right is not None:
+                    return self.__search_node(cur.right, item)
+                else:
+                    return False
+   
