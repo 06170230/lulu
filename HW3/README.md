@@ -24,24 +24,24 @@ class BinaryTree:
     def __init__(self):
         self.head = Node(None)
         
-    def search(self, item):
+    def search(self, target):
         if self.head.val is None:
             return False
         else:
-            return self.__search_node(self.head, item)
+            return self.__search_node(self.head, target)
 
-    def __search_node(self, cur, item):
-        if cur.val == item:
+    def __search_node(self, cur, target):
+        if cur.val == target:
             return True
         else:
-            if cur.val >= item:
+            if cur.val >= target:
                 if cur.left is not None:
-                    return self.__search_node(cur.left, item)
+                    return self.__search_node(cur.left, target)
                 else:
                     return False
-            elif cur.val <= item:
+            else: 
                 if cur.right is not None:
-                    return self.__search_node(cur.right, item)
+                    return self.__search_node(cur.right, target)
                 else:
                     return False
    
