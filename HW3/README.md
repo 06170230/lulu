@@ -1,7 +1,7 @@
 ```py
-class Node:
-    def __init__(self, item):
-        self.val = item
+class TreeNode(object):
+    def __init__(self,x):
+        self.val = x
         self.left = None
         self.right = None
 ```
@@ -19,29 +19,36 @@ search是在整棵樹裡面我們要尋找到的數值，如果一開始的head�
 然後不斷重複直到 cur.val=我們要找的數，return True // 如果找不到，return False
 
 ```py
-class BinaryTree:
+class Solution(object):
     
     def __init__(self):
-        self.head = Node(None)
-        
-    def search(self, target):
+        self.head = TreeNode(None)      
+
+    
+    def search_head(self,target):
         if self.head.val is None:
             return False
         else:
-            return self.__search_node(self.head, target)
-
-    def __search_node(self, cur, target):
-        if cur.val == target:
+            return self.search(self.head, target)
+        
+    def search(self, root, target):
+        if root.val == target:
             return True
         else:
-            if cur.val >= target:
-                if cur.left is not None:
-                    return self.__search_node(cur.left, target)
+            if root.val >= target:
+                if root.left is not None:
+                    return self.search(root.left, target)
                 else:
                     return False
-            else: 
-                if cur.right is not None:
-                    return self.__search_node(cur.right, target)
+            elif root.val < target:   
+                if root.right is not None:
+                    return self.search(root.right, target)
                 else:
-                    return False
-   
+                    return False      
+
+                
+root.head = TreeNode(5)
+root.left = TreeNode(3)
+root.left.left = TreeNode(3)
+root.left.right = TreeNode(4)
+```   
