@@ -10,13 +10,13 @@ search
 
 search是在整棵樹裡面我們要尋找到的數值，如果一開始的head是一個空值的話那根本找不到東西，所以false
 
-確認head不是空值後我們就開始尋找要找的數，我們設一個當前值cur.val，如果cur.val等於我們要找的數，那就是正確的
+確認head不是空值後我們就開始尋找要找的數，我們設一個當前值root.val，如果root.val等於我們要找的數，那就是正確的
 
-如果cur.val大於等於我們要找的數且cur.left(當前數的左邊child)不是空值，那接下來的cur.val值改為cur.left值
+如果root.val大於等於我們要找的數且root.left(當前數的左邊child)不是空值，那接下來的root.val值改為root.left值
 
-如果cur.val小於等於我們要找的數且cur.right(當前數的右邊child)不是空值，那接下來的cur.val值改為cur.right值
+如果root.val小於等於我們要找的數且root.right(當前數的右邊child)不是空值，那接下來的root.val值改為root.right值
 
-然後不斷重複直到 cur.val=我們要找的數，return True // 如果找不到，return False
+然後不斷重複直到 root.val=我們要找的數，return True // 如果找不到，return False
 
 ```py
 class Solution(object):
@@ -48,6 +48,7 @@ class Solution(object):
 
                 
 root.head = TreeNode(5)
+root.right = TreeNode(7)
 root.left = TreeNode(3)
 root.left.left = TreeNode(3)
 root.left.right = TreeNode(4)
