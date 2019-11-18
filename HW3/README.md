@@ -53,3 +53,4 @@ root.left = TreeNode(3)
 root.left.left = TreeNode(3)
 root.left.right = TreeNode(4)
 ```   
+<img src = "https://github.com/06170230/lulu/blob/master/image/search.jpg" >
