@@ -54,3 +54,7 @@ root.left.left = TreeNode(3)
 root.left.right = TreeNode(4)
 ```   
 <img src = "https://github.com/06170230/lulu/blob/master/image/search.jpg" >
+
+* 找的目標為7 
+* 找的目標為8
+<img src = "https://github.com/06170230/lulu/blob/master/image/search1.jpg"height =500 weight = 500 >
