@@ -47,7 +47,7 @@ class Solution(object):
                     return False      
 
                 
-root.head = TreeNode(5)
+root = TreeNode(5)
 root.right = TreeNode(7)
 root.left = TreeNode(3)
 root.left.left = TreeNode(3)
