@@ -8,6 +8,8 @@ class TreeNode(object):
 search
 ---
 
+[參考資料 : youtube頻道](https://www.youtube.com/channel/UCxP77kNgVfiiG6CXZ5WMuAQ)
+
 search是在整棵樹裡面我們要尋找到的數值，如果一開始的head是一個空值的話那根本找不到東西，所以false
 
 確認head不是空值後我們就開始尋找要找的數，我們設一個當前值root.val，如果root.val等於我們要找的數，那就是正確的
