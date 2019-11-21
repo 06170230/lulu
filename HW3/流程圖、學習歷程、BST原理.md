@@ -162,13 +162,13 @@ delete也花了我非常多時間，但其實還算簡單只是我想不到方�
 
 直到search(root,target) != True時，代表target值都刪光了，那我們才是真的完成這個delete
 
-我自己覺得delete最重要的幾個部分
+* 我自己覺得delete最重要的幾個部分
 
-* 刪除重複值
+    * 刪除重複值
 
-* 不同child數量 0、1、2 刪法都不同 
+    * 不同child數量 0、1、2 刪法都不同 
 
-* 2個child delete 找左邊最大or右邊最小
+    * 2個child delete 找左邊最大or右邊最小
 
 ```py
     def minRightNode(self, root):
