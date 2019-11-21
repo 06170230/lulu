@@ -139,3 +139,88 @@ Solution().insert(root,4) == root.left.right
         * 檢查insert(root,4)位置
 
 <img src = "https://github.com/06170230/lulu/blob/master/image/insert.jpg"  height =500 weight = 500>
+
+
+delete
+---
+
+[參考資料 : youtube影片](https://www.youtube.com/watch?v=gcULXE7ViZw)
+
+[參考資料 : youtube頻道](https://www.youtube.com/channel/UCxP77kNgVfiiG6CXZ5WMuAQ)
+
+delete也花了我非常多時間，但其實還算簡單只是我想不到方法做而已
+
+在網路上看影片學習delete是怎麼運作時，學得很快，也很順利寫出程式碼
+
+直到用助教的測值執行時，發現重複的值我沒辦法一次刪掉，因為這個問題卡了好久
+
+詢問其他同學後，他們告訴我可以利用"search"，找尋我要delete的target
+
+如果我做完delete後還能夠search到這個target的話，代表這棵樹裡有重複值還沒被刪掉
+
+這個時候我就寫了一個while迴圈，如果還能search到我delete的target，那就再做一次
+
+直到search(root,target) != True時，代表target值都刪光了，那我們才是真的完成這個delete
+
+我自己覺得delete最重要的幾個部分
+
+* 刪除重複值
+
+* 不同child數量 0、1、2 刪法都不同 
+
+* 2個child delete 找左邊最大or右邊最小
+
+```py
+    def minRightNode(self, root):
+        if root.left is None:
+            return root
+        else:
+            return self.minRightNode(root.left)
+
+    def delete(self, root, target):
+        
+        while self.search(root,target) is True:
+            
+                    # If the key to be deleted is smaller than the root's
+                # key then it lies in  left subtree
+            if target < root.val:
+                root.left = self.delete(root.left, target)
+
+                    # If the kye to be delete is greater than the root's key
+                # then it lies in right subtree
+            elif target > root.val:
+                  root.right = self.delete(root.right, target)
+
+                    # If key is same as root's key, then this is the node
+                # to be deleted
+            else:
+                    # 0child or 1child
+                if root.left is None:
+                    child = root.right
+                    root = None
+                    return child
+
+                elif root.right is None:
+                    child = root.left
+                    root = None
+                    return child
+
+                elif root.right is None and root.left is None:
+                    return None
+
+                        # Node with two children: Get the inorder successor
+                    # 我要找右邊最小
+                child = self.minRightNode(root.right)
+
+                    # Copy the inorder successor's content to this node
+                root.val = child.val
+
+                    # Delete the inorder successor
+                root.right = self.delete(root.right, child.val)
+                
+            self.delete(root,target)
+            
+        else:
+            return
+
+```
