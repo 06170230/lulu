@@ -222,4 +222,8 @@ delete也花了我非常多時間，但其實還算簡單只是我想不到方�
 
 ```
 
+* 0 child
+    * 1 child
+        * 2child
+
 <img src = "https://github.com/06170230/lulu/blob/master/image/delete流程圖.jpg"  height =750 weight = 750>
