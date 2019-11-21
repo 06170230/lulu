@@ -181,22 +181,15 @@ delete也花了我非常多時間，但其實還算簡單只是我想不到方�
         else:
             return self.minRightNode(root.left)
 
-    def delete(self, root, target):
-        
+    def delete(self, root, target):       
         while self.search(root,target) is True:
-            
-                    # If the key to be deleted is smaller than the root's
-                # key then it lies in  left subtree
+
             if target < root.val:
                 root.left = self.delete(root.left, target)
 
-                    # If the kye to be delete is greater than the root's key
-                # then it lies in right subtree
             elif target > root.val:
                   root.right = self.delete(root.right, target)
-
-                    # If key is same as root's key, then this is the node
-                # to be deleted
+                  
             else:
                     # 0child or 1child
                 if root.left is None:
@@ -212,14 +205,14 @@ delete也花了我非常多時間，但其實還算簡單只是我想不到方�
                 elif root.right is None and root.left is None:
                     return None
 
-                        # Node with two children: Get the inorder successor
+                     
                     # 我要找右邊最小
                 child = self.minRightNode(root.right)
 
-                    # Copy the inorder successor's content to this node
+                    
                 root.val = child.val
 
-                    # Delete the inorder successor
+                   
                 root.right = self.delete(root.right, child.val)
                 
             self.delete(root,target)
