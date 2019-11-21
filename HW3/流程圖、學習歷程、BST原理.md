@@ -1,3 +1,26 @@
+流程圖、學習歷程、BST原理
+===
+
+BST原理
+---
+
+* 簡介
+
+二元搜索樹(Binary Search Tree)是基於二元樹的一種延伸，二元搜索樹的應用範圍很廣，可以利用在搜索、排序和提供資料集合基本結構，發展其他資料結構，所以也是重要的資料結構之一。
+
+* 定義
+
+    * 左子樹不為空，則左子樹的所有節點的鍵值(Key)小於根節點的鍵值。
+    * 右子樹不為空，則右子樹的所有節點的鍵值(Key)大於根節點的鍵值。
+    * 左右子樹也都是二元搜索樹。
+    * 節點不會有重複的鍵值。
+    
+這個定義是樹中的節點都具有Key-value pair情況，有時候可能會其他變化：
+
+沒有鍵值，而用值(Value)來比較。
+
+允許重複的資料，此時會出現等於的情況，則將定義1.改成小於等於或者定義2.改成大於等於。
+
 ```py
 class TreeNode(object):
     def __init__(self,x):
@@ -10,15 +33,15 @@ search
 
 [參考資料 : youtube頻道](https://www.youtube.com/channel/UCxP77kNgVfiiG6CXZ5WMuAQ)
 
-search是在整棵樹裡面我們要尋找到的數值，如果一開始的head是一個空值的話那根本找不到東西，所以false
+`search`是在整棵樹裡面我們要尋找到的數值，如果一開始的`head`是一個空值的話那根本找不到東西，所以false
 
-確認head不是空值後我們就開始尋找要找的數，我們設一個當前值root.val，如果root.val等於我們要找的數，那就是正確的
+確認`head`不是空值後我們就開始尋找要找的數，我們設一個當前值`root.val`，如果`root.val`等於我們要找的數，那就是正確的
 
-如果root.val大於等於我們要找的數且root.left(當前數的左邊child)不是空值，那接下來的root.val值改為root.left值
+如果`root.val`大於等於我們要找的數且`root.left`(當前數的左邊child)不是空值，那接下來的`root.val`值改為`root.left`值
 
-如果root.val小於等於我們要找的數且root.right(當前數的右邊child)不是空值，那接下來的root.val值改為root.right值
+如果`root.val小於等於我們要找的數且`root.right`(當前數的右邊child)不是空值，那接下來的`root.val`值改為`root.right值
 
-然後不斷重複直到 root.val=我們要找的數，return True // 如果找不到，return False
+然後不斷重複直到 `root.val=我們要找的數`， return True // 如果找不到，return False
 
 ```py
 class Solution(object):
@@ -76,13 +99,13 @@ insert
 
 insert對我來說根本是地獄，我整整花了快三天才解決我的問題，看到參考資料這麼多就知道我有多迷惘了
 
-首先我們insert當然是從樹的頭頭開始，我們先設定"root is None" ，然後直接填入數字
+首先我們`insert`當然是從樹的頭頭開始，我們先設定`root is None` ，然後直接填入數字
 
-接著再寫 root != None 的時候，這個時候填入的值與比較的root會有兩種可能
+接著再寫 `root != None` 的時候，這個時候填入的值與比較的root會有兩種可能
 
-* root.val >= val  ---> 按照規定我們把小的放到左邊，如果 root.left !=None ，我們就把root.left當成root.val再丟到recursive再做一次直到可以直接填入為止
+* `root.val >= val`  ---> 按照規定我們把小的放到左邊，如果 `root.left !=None` ，我們就把`root.left`當成`root.val`再丟到recursive再做一次直到可以直接填入為止
 
-* root.val <  val  ---> 按照規定我們把大的放到右邊，右邊也和左邊概念相同，只是方向相反而已
+* `root.val <  val  ---> 按照規定我們把大的放到右邊，右邊也和左邊概念相同，只是方向相反而已
 
 接著來看看我卡住的地方
 
@@ -158,13 +181,13 @@ delete也花了我非常多時間，但其實還算簡單只是我想不到方�
 
 <img src = "https://github.com/06170230/lulu/blob/master/image/delete.jpg" >
 
-詢問其他同學後，他們告訴我可以利用"search"，找尋我要delete的target
+詢問其他同學後，他們告訴我可以利用`search`，找尋我要`delete`的`target`
 
-如果我做完delete後還能夠search到這個target的話，代表這棵樹裡有重複值還沒被刪掉
+如果我做完`delete`後還能夠`search`到這個`target`的話，代表這棵樹裡有重複值還沒被刪掉
 
-這個時候我就寫了一個while迴圈，如果還能search到我delete的target，那就再做一次
+這個時候我就寫了一個while迴圈，如果還能`search`到我`delete`的`target`，那就再做一次
 
-直到search(root,target) != True時，代表target值都刪光了，那我們才是真的完成這個delete
+直到`search(root,target) != True`時，代表`target`值都刪光了，那我們才是真的完成這個`delete`
 
 * 我自己覺得delete最重要的幾個部分
 
