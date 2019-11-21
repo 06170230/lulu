@@ -154,6 +154,10 @@ delete也花了我非常多時間，但其實還算簡單只是我想不到方�
 
 直到用助教的測值執行時，發現重複的值我沒辦法一次刪掉，因為這個問題卡了好久
 
+如圖 
+
+<img src = "https://github.com/06170230/lulu/blob/master/image/delete.jpg" >
+
 詢問其他同學後，他們告訴我可以利用"search"，找尋我要delete的target
 
 如果我做完delete後還能夠search到這個target的話，代表這棵樹裡有重複值還沒被刪掉
@@ -224,3 +228,5 @@ delete也花了我非常多時間，但其實還算簡單只是我想不到方�
             return
 
 ```
+
+<img src = "https://github.com/06170230/lulu/blob/master/image/delete流程圖.jpg"  height =750 weight = 750>
