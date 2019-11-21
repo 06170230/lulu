@@ -39,7 +39,7 @@ search
 
 如果`root.val`大於等於我們要找的數且`root.left`(當前數的左邊child)不是空值，那接下來的`root.val`值改為`root.left`值
 
-如果`root.val小於等於我們要找的數且`root.right`(當前數的右邊child)不是空值，那接下來的`root.val`值改為`root.right值
+如果`root.val`小於等於我們要找的數且root.right(當前數的右邊child)不是空值，那接下來的`root.val`值改為`root.right`值
 
 然後不斷重複直到 `root.val=我們要找的數`， return True // 如果找不到，return False
 
