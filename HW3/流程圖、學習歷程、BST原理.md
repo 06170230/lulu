@@ -250,3 +250,23 @@ delete也花了我非常多時間，但其實還算簡單只是我想不到方�
         * 2child
 
 <img src = "https://github.com/06170230/lulu/blob/master/image/delete流程圖.jpg"  height =750 weight = 750>
+
+
+
+modify
+---
+
+[參考資料](https://www.geeksforgeeks.org/how-to-implement-decrease-key-or-change-key-in-binary-search-tree/)
+
+我覺得一般的modify其實很簡單，就只是把`delete`跟`insert`依照我們要提取出來的數和輸入進去的數，重新再做一次而已
+
+但困擾我很久的是，到底該怎麼做才能夠讓binary search tree 的整個長度不會改變
+
+我實在是想不到好方法，不過交作業的時間到了，之後會好好思考一下再重新修改我的程式碼
+
+```py
+    def modify (self,root,target,new_val):
+        root = self.delete(root,target)
+        root = self.insert(root,new_val)
+        return root
+```
