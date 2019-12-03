@@ -117,7 +117,11 @@ add
 
 <img src = "https://github.com/06170230/lulu/blob/master/image/hashtable_add2.jpg" height =750 weight = 750>
 
+[參考資料](https://www.youtube.com/watch?v=zHi5v78W1f0&t=3s)
 
+[參考資料](https://www.youtube.com/watch?v=vBxmYemGUWk&t=561s)
+
+[參考資料] : 老師上課教的內容
 
 remove
 ---
@@ -221,4 +225,4 @@ contains 我也是把他當成 `binary search tree` 中的search來看
                 return False
 ```
 
-<img src = "https://github.com/06170230/lulu/blob/master/image/hashtable_contains.jpg" height =700 weight = 700>
+<img src = "https://github.com/06170230/lulu/blob/master/image/hashtable_contains.jpg" height =600 weight = 600>
