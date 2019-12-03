@@ -121,7 +121,7 @@ add
 
 [參考資料](https://www.youtube.com/watch?v=vBxmYemGUWk&t=561s)
 
-[參考資料] : 老師上課教的內容
+參考資料 : 老師上課教的內容
 
 remove
 ---
@@ -186,6 +186,10 @@ remove
     
 <img src = "https://github.com/06170230/lulu/blob/master/image/hashtable_remove2.jpg" height =700 weight = 700>
 
+[參考資料](https://www.youtube.com/watch?v=O4dGJZ4J0Bk)
+
+參考資料 : 老師上課教的內容
+
 
 contains
 ---
@@ -226,3 +230,6 @@ contains 我也是把他當成 `binary search tree` 中的search來看
 ```
 
 <img src = "https://github.com/06170230/lulu/blob/master/image/hashtable_contains.jpg" height =600 weight = 600>
+
+
+[參考資料](https://github.com/graphoarty/python-dsa/blob/master/DataStructures/HashTable/HashTable.py)
