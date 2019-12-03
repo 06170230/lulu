@@ -67,9 +67,9 @@ remove
 
 重新多看好幾次後發現如果我再刪除某個key值時，就只是單純把他刪除
 
-但如果index中還有其他key值也被串聯在被刪除的key值後面，那麼整個連接就會斷掉
+但如果index中還有其他node也被串聯在被刪除的key值後面，那麼整個連接就會斷掉
 
-因為index中可能有大於一個以上的key值，我們做刪除後，必須把後方串聯好的key值遞補上來
+因為index中可能有大於一個以上的node，我們做刪除後，必須把後方串聯好的node遞補上來
 
 因此先寫一個刪除node後，後方的node遞補上去的程式
 
@@ -85,7 +85,7 @@ remove
 
 一層一層往下看直到我們找出要刪除的key值
 
-直到整串index中的key都被走訪過一次
+直到整串index中的node都被走訪過一次
 
 如果找不到要刪除的key值就直接回傳
 
@@ -122,3 +122,44 @@ remove
     * 經過遞補後的
     
 <img src = "https://github.com/06170230/lulu/blob/master/image/hashtable_remove2.jpg" height =700 weight = 700>
+
+
+contains
+---
+
+contains 我也是把他當成 `binary search tree` 中的search來看
+
+從node的頭開始找如果node是None就直接回傳False
+
+如果node的值剛好等於key值就回傳True
+
+或是繼續往下找一層一層找，使用while迴圈
+
+走過每個下面的node直到走完，如果有找到則回傳True
+
+如果沒有找到就回傳False
+
+
+```py
+    def contains(self, key):
+        h = MD5.new()
+        h.update(key.encode("utf-8"))
+        x = h.hexdigest()
+        key = int(h.hexdigest(),16)
+        index = key % self.capacity
+        node = self.data[index]
+        
+        if node is None:
+            return False
+        else:
+            if node.val == key :
+                return True
+            else:
+                while node.next:
+                    if node.next == key:
+                        return True
+                    node.next = node.next.next
+                return False
+```
+
+<img src = "https://github.com/06170230/lulu/blob/master/image/hashtable_contains.jpg" height =700 weight = 700>
