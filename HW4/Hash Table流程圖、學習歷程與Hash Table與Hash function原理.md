@@ -1,6 +1,65 @@
 Hash Table流程圖、學習歷程與Hash Table與Hash function原理
 ===
 
+Hash Table原理
+---
+
+Hash Table希望能夠將存放資料的「Table」的大小(size)降到「真正會存放進Table的資料的數量」，也就是「有用到的Key的數量」
+
+資料存放的方式是，資料經過md5處理後會轉成一串數值，這串數值除以table的長度，除出來的餘數對應我們要放置在Table (index)的何處
+
+也因為這個方式所以  【很可能發生Collision】 
+
+Collision就是兩筆資料存進同一個Table之slot的情形，這將會使得查詢資料失敗(例如：使用item1的Key，卻回傳item2的資料)。
+
+為了解決這個問題，我們必須把該位置的資料作串聯，才能讓同個Table中的資料都能被保存
+
+[參考資料](http://alrightchiu.github.io/SecondRound/hash-tableintrojian-jie.html#ht)
+
+[參考資料](http://alrightchiu.github.io/SecondRound/hash-tableintrojian-jie.html#collision)
+
+Hash function原理
+---
+
+優秀的Hash Function(h())應具備以下特徵：
+
+* 定義h()的定義域(domain)為整個Key的宇集合U，值域(range)應小於Table的大小m：
+
+* 盡可能讓Key在經過Hash Function後，在值域(也就是Table的index)能夠平均分佈(uniform distributed)，如此才不會有「兩筆資料存進同一個Table空格(稱為slot)」的情況。
+
+若把Table想像成「書桌」，slot想像成書桌的「抽屜」
+
+那麼為了要能更快速找到物品，當然是希望「每一個抽屜只放一個物品」
+
+如此一來，只要拿著Key，透過Hash Function找到對應的抽屜(Hash Function的功能是指出「第幾個」抽屜，也就是抽屜的index)
+
+就能保證是該Key所要找的物品
+
+反之，如果同一個抽屜裡有兩個以上的物品時，便有可能找錯物品
+
+做法 :
+
+要把大範圍的|U|對應到較小範圍的{0,1,...,m−1}，最直覺的做法就是利用%取餘數。
+
+假設Table大小為m，定義Hash Function為：
+
+h(Key)=Key%m
+
+例如，選定Table大小為m=8，那麼以下的Key與Table之index將有對應關係如下：
+
+* h(14)=14%8=6
+    * 代表「編號14」的物品要放進「第6格」抽屜。
+* h(23)=23%8=7
+    * 代表「編號23」的物品要放進「第7格」抽屜。
+* h(46)=46%8=6
+    * 代表「編號46」的物品要放進「第6格」抽屜。
+* h(50)=50%8=2
+    * 代表「編號50」的物品要放進「第2格」抽屜。
+
+[參考資料](http://alrightchiu.github.io/SecondRound/hash-tableintrojian-jie.html#hf)
+
+[參考資料]()
+
 Hash Table 流程圖、學習歷程
 ---
 
