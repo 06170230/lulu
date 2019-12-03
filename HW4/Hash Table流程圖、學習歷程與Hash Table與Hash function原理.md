@@ -14,9 +14,9 @@ Collision就是兩筆資料存進同一個Table之slot的情形，這將會使�
 
 為了解決這個問題，我們必須把該位置的資料作串聯，才能讓同個Table中的資料都能被保存
 
-[參考資料](http://alrightchiu.github.io/SecondRound/hash-tableintrojian-jie.html#ht)
+[Hash Table原理參考資料](http://alrightchiu.github.io/SecondRound/hash-tableintrojian-jie.html#ht)
 
-[參考資料](http://alrightchiu.github.io/SecondRound/hash-tableintrojian-jie.html#collision)
+[Collision參考資料](http://alrightchiu.github.io/SecondRound/hash-tableintrojian-jie.html#collision)
 
 Hash function原理
 ---
@@ -37,7 +37,7 @@ Hash function原理
 
 反之，如果同一個抽屜裡有兩個以上的物品時，便有可能找錯物品
 
-做法 :
+* Division Method做法 :
 
 要把大範圍的|U|對應到較小範圍的{0,1,...,m−1}，最直覺的做法就是利用%取餘數。
 
@@ -56,9 +56,9 @@ h(Key)=Key%m
 * h(50)=50%8=2
     * 代表「編號50」的物品要放進「第2格」抽屜。
 
-[參考資料](http://alrightchiu.github.io/SecondRound/hash-tableintrojian-jie.html#hf)
+[Hash function原理參考資料](http://alrightchiu.github.io/SecondRound/hash-tableintrojian-jie.html#hf)
 
-[參考資料]()
+[Division Method參考資料](http://alrightchiu.github.io/SecondRound/hash-tableintrojian-jie.html#dm)
 
 Hash Table 流程圖、學習歷程
 ---
