@@ -48,12 +48,12 @@ add
 
 * 錯誤情形
 
-如果同個index中有多於一個以上的key值而不做處理會發生這個情況
+    * 如果同個index中有多於一個以上的key值而不做處理會發生這個情況
 
 <img src = "https://github.com/06170230/lulu/blob/master/image/hashtable_add.jpg" height =750 weight = 750>
 
 * 正確情形
 
-把同個index中的所有key值做串聯，讓他們一個都不會少
+    * 把同個index中的所有key值做串聯，讓他們一個都不會少
 
 <img src = "https://github.com/06170230/lulu/blob/master/image/hashtable_add2.jpg" height =750 weight = 750>
