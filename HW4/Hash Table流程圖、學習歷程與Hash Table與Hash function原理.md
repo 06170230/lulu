@@ -57,3 +57,68 @@ add
     * 把同個index中的所有key值做串聯，讓他們一個都不會少
 
 <img src = "https://github.com/06170230/lulu/blob/master/image/hashtable_add2.jpg" height =750 weight = 750>
+
+
+
+remove
+---
+
+一開始在寫remove的時候也還算順利，不過寫完以後發現有錯誤但一直找不到問題
+
+重新多看好幾次後發現如果我再刪除某個key值時，就只是單純把他刪除
+
+但如果index中還有其他key值也被串聯在被刪除的key值後面，那麼整個連接就會斷掉
+
+因為index中可能有大於一個以上的key值，我們做刪除後，必須把後方串聯好的key值遞補上來
+
+因此先寫一個刪除node後，後方的node遞補上去的程式
+
+```py
+        if node!= None and node.val == key:
+            self.data[index] = node.next
+            return
+```
+
+代表node.next遞補成第一個node了
+
+接著寫while迴圈
+
+一層一層往下看直到我們找出要刪除的key值
+
+直到整串index中的key都被走訪過一次
+
+如果找不到要刪除的key值就直接回傳
+
+
+```py
+    def remove(self, key):
+        h = MD5.new()
+        h.update(key.encode("utf-8"))
+        x = h.hexdigest()
+        key = int(h.hexdigest(),16)
+        index = key % self.capacity
+        node = self.data[index]
+        
+       
+        if node!= None and node.val == key:
+            self.data[index] = node.next
+            return
+        pre_node = None     
+        while node.next:
+            if node.next == key:
+                pre_node.next = node.next
+                return
+            pre_node = node
+            node.next = node.next.next
+            return
+```
+
+* 錯誤情形 
+    * 當我們沒有寫遞補程式時
+
+<img src = "https://github.com/06170230/lulu/blob/master/image/hashtable_remove.jpg" height =700 weight = 700>
+
+* 正確情形
+    * 經過遞補後的
+    
+<img src = "https://github.com/06170230/lulu/blob/master/image/hashtable_remove2.jpg" height =700 weight = 700>
