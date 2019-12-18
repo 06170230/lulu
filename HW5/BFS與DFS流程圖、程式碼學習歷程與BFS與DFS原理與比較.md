@@ -99,6 +99,8 @@ BFS
 
 經過修改以後就正確啦！！
 
+[參考youtube影片](https://www.youtube.com/watch?v=QkEOGoUar3g)
+
 DFS
 ===
 
@@ -143,3 +145,4 @@ DFS
 
 使用迴圈重複上述的動作，直到graph中的數字都走過一次就完成啦！！
 
+[參考youtube影片](https://www.youtube.com/watch?v=0Zsabo7ires&t=29s)
