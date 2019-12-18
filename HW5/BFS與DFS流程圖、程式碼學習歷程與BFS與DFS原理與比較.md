@@ -49,7 +49,7 @@ BFS
 流程圖
 ---
 
-<img src = "https://github.com/06170230/lulu/blob/master/image/BFS.jpg" height =700 weight = 700>
+<img src = "https://github.com/06170230/lulu/blob/master/image/.jpg" height =700 weight = 700>
 
 程式碼
 ---
@@ -107,7 +107,7 @@ DFS
 流程圖
 ---
 
-<img src = "https://github.com/06170230/lulu/blob/master/image/DFS.jpg" height =700 weight = 700>
+<img src = "https://github.com/06170230/lulu/blob/master/image/.jpg" height =700 weight = 700>
 
 程式碼
 ---
