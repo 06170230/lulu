@@ -54,7 +54,7 @@ class LinkedList:
             print(cur.val)
             cur = cur.next
     
-    ```
+```
 在建立list的一開始，我們預設裡面是沒有節點的。而linked-list本身帶有head跟next兩個屬性。當我們加入一個新的節點時：
 若list本身還沒有任何節點，則head以及next都會變成新的結點
 若list已經包含有其他節點，則新加入的節點變成新的next（本來的next指向新的節點）。
