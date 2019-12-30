@@ -1,7 +1,18 @@
 Stack
 ===
 
-* 從後面取
+Stack 必須有的功能
+---
+
+* 1. Push(data):把資料放進Stack。把書放進箱子。
+
+* 2.Pop:把「最上面」的資料從Stack中移除。把箱子中「最上面」的書拿出來。
+
+* 3.Top:回傳「最上面」的資料。確認箱子「最上面」的是哪本書。
+
+* 4. IsEmpty:確認Stack裡是否有資料。確認箱子裡面有沒有書。
+
+* 5. getSize:回傳Stack裡的資料個數。記錄目前箱子已經裝了多少本書。
 
 ```py
 class Stack:
@@ -32,7 +43,20 @@ class Stack:
 Queue
 ===
 
-* 從前面取
+Queue 必須有的功能
+---
+
+* 1. Push(data):把資料從Queue的「後面」放進Queue,並更新成新的back.
+
+* 2. Pop:把front所指向的資料從Queue中移除,並更新front。從Queue刪除資料又稱為dequeue.
+
+* 3. getFront:回傳front所指向的資料。
+
+* 4. getBack:回傳back所指向的資料。
+
+* 5. IsEmpty:確認Queue裡是否有資料。
+
+* 6. getSize:回傳Queue裡的資料個數。
 
 ```py
 class Queue:
