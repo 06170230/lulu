@@ -1,53 +1,63 @@
 Stack
 ===
 
+* 從後面取
+
 ```py
 class Stack:
 
     def __init__(self):
-        self.item = []
+        self.stack = []
         
-    def add(self, target):
-        self.item.append(target)
+    def push(self, x: int) -> None:
+        self.stack.append(x)
     
     def pop(self) -> None:
-        self.item.pop(-1)
+        self.stack.pop()
         
     def top(self) -> int:
-        return self.item[-1]
+        return self.stack[-1]
     
-    def is_empty(self):
-        if len(self.item) == 0:
+    def IsEmpty(self):
+        if len(self.stack) == 0:
             return True
         else:
             return False
         
-    def size(self):
-        return len(self.item)
+    def getSize(self):
+        return len(self.stack)
 ```
 
 
 Queue
 ===
 
+* 從前面取
+
 ```py
 class Queue:
 
     def __init__(self):
-        self.items = []
+        self.queue = []
 
-    def add(self, target):
-        self.items.append(target)
+    def push(self, x: int) -> None:
+        self.queue.append(x)
 
-    def pop(self):
-        self.items.pop(0)
-
-    def print_queue(self):
-        print(self.items)
-
-    def is_empty(self):
-        return self.items == []
-
-    def size(self):
-        return len(self.items)
+    def pop(self) -> int:
+        return self.queue.pop(0)
+        
+    def getFront(self) -> int:
+        return self.queue[0]
+    
+    def getBack(self):
+        return self.queue[-1]
+        
+    def IsEmpty(self) -> bool:
+        if len(self.queue) == 0:
+            return True
+        else:
+            return False
+    
+    def getSize(self):
+        return len(self.queue)
 ```
