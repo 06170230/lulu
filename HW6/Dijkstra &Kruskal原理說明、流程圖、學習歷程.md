@@ -45,6 +45,9 @@ Dijkstra &Kruskal原理說明
  
  
  
+ 
+ 
+ 
  Dijkstra &Kruskal流程圖
  ---
  
@@ -60,3 +63,109 @@ Dijkstra &Kruskal原理說明
  
  <img src = "https://github.com/06170230/lulu/blob/master/image/Kruskal2.jpg" height =600 weight = 600>
  
+
+
+
+
+
+
+Dijkstra &Kruskal學習歷程
+---
+
+* Dijkstra
+
+```py
+    def minDistance(self, dist, sptSet): 
+        min = sys.maxsize
+        for v in range(self.V): 
+            if dist[v] < min and sptSet[v] == False: 
+                min = dist[v] 
+                min_index = v 
+        return min_index 
+
+    def Dijkstra(self, s): 
+        dist = [sys.maxsize] * self.V 
+        dist[s] = 0
+        sptSet = [False] * self.V
+        x={} 
+        for cout in range(self.V): 
+            u = self.minDistance(dist, sptSet) 
+            sptSet[u] = True
+            for v in range(self.V):                 
+                if self.graph[u][v] > 0 and sptSet[v] == False and dist[v] > dist[u] + self.graph[u][v]:
+                    dist[v] = dist[u] + self.graph[u][v]
+                    
+        for node in range(self.V):
+            x.update( {str(node) : dist[node]} )
+        return x
+```
+
+* Kruskal
+
+```py
+    def __init__(self, vertices): 
+        self.V = vertices 
+        self.graph = [] 
+        self.graph_matrix = [[0 for column in range(vertices)]  
+                    for row in range(vertices)] 
+        self.nodes = set()
+        self.edges = defaultdict(list)
+        self.distances = {}
+        
+    def addEdge(self,u,v,w):
+        self.graph.append([u,v,w]) 
+        
+    def find(self, parent, i): 
+        if parent[i] == i: 
+            return i 
+        return self.find(parent, parent[i]) 
+  
+    def union(self, parent, rank, x, y): 
+        xroot = self.find(parent, x) 
+        yroot = self.find(parent, y)
+        if rank[xroot] < rank[yroot]: 
+            parent[xroot] = yroot 
+        elif rank[xroot] > rank[yroot]: 
+            parent[yroot] = xroot  
+        else : 
+            parent[yroot] = xroot 
+            rank[xroot] += 1
+        
+
+    def Kruskal(self): 
+        z = {}
+        result =[] 
+        i = 0
+        e = 0
+        self.graph =  sorted(self.graph,key=lambda item: item[2]) 
+        parent = [] ; rank = [] 
+        for node in range(self.V): 
+            parent.append(node) 
+            rank.append(0) 
+        while e < self.V -1 : 
+            u,v,w =  self.graph[i] 
+            i = i + 1
+            x = self.find(parent, u) 
+            y = self.find(parent ,v)
+            if x != y: 
+                e = e + 1     
+                result.append([u,v,w]) 
+                self.union(parent, rank, x, y)             
+        for u,v,weight in result: 
+            u = str(u)
+            v = str(v)
+            z.update( {str(u+"-"+v):weight} )
+        return z
+```
+
+這次的作業我認為比之前困難許多，一開始雖然在上課就知道Dijkstra的運作模式
+
+但是在真的寫程式的時候真的毫無頭緒，只能參考moodle裡老師給的資料，去理解Dijkstra的程式碼
+
+光是理解Dijkstra就花了不少時間，再加上之後的Kruskal也很困難，所以也參考網路上的程式碼
+
+不過我也有吸收下來，現在考完期末考了，我也有時間用自己的方法重新寫寫看！
+
+Dijkstra參考資料 (https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/)
+
+Kruskal參考資料 (https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/)
