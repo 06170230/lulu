@@ -35,11 +35,11 @@ code
 * week1
   * 課程介紹
 
-* [week2](https://github.com/06170230/lulu/tree/master/HW1)
+* [week2](https://github.com/06170230/lulu/tree/master/Linked%20list)
 
 * [week3](https://github.com/06170230/lulu/tree/master/Stack%26Queue)
 
-* [week4](https://github.com/06170230/lulu/blob/master/Quick_sort/my%20quicksort%20.ipynb)
+* [week4](https://github.com/06170230/lulu/tree/master/HW1)
 
 * week5
   * 放假！
