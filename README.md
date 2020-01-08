@@ -23,7 +23,8 @@ ABOUT ME
 
 * [week4](https://github.com/06170230/lulu/blob/master/%E6%AF%8F%E5%80%8B%E7%A6%AE%E6%8B%9C%E7%9A%84%E8%AA%B2%E7%A8%8B%E5%85%A7%E5%AE%B9/week4.md)
 
-* [week5](https://github.com/06170230/lulu/blob/master/%E6%AF%8F%E5%80%8B%E7%A6%AE%E6%8B%9C%E7%9A%84%E8%AA%B2%E7%A8%8B%E5%85%A7%E5%AE%B9/week5.md)
+* week5
+  * 放假！
 
 * [week6](https://github.com/06170230/lulu/blob/master/%E6%AF%8F%E5%80%8B%E7%A6%AE%E6%8B%9C%E7%9A%84%E8%AA%B2%E7%A8%8B%E5%85%A7%E5%AE%B9/week6.md)
 
