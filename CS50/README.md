@@ -6,6 +6,6 @@ CS50
 Week5
 ---
 
-* [Monday]()
+* [Monday](https://github.com/06170230/lulu/blob/master/CS50/week5-Monday.md)
 
-* [Wendesday]()
+* [Wendesday](https://github.com/06170230/lulu/blob/master/CS50/week5-Wendesday.md)
