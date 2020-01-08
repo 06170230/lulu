@@ -26,6 +26,8 @@ code
 
 * [LeetCode](https://github.com/06170230/lulu/tree/master/Leetcode)
 
+* [CS50](https://github.com/06170230/lulu/tree/master/CS50)
+
 
 課程內容
 ---
