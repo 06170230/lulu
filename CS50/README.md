@@ -6,6 +6,6 @@ CS50
 Week5
 ---
 
-* [Monday](https://github.com/06170230/lulu/blob/master/CS50/week5-Monday.md)
+* [Monday](https://www.youtube.com/watch?v=IEuvKVjw2oM)
 
-* [Wendesday](https://github.com/06170230/lulu/blob/master/CS50/week5-Wendesday.md)
+* [Wendesday](https://www.youtube.com/watch?v=atBMLJdSKBo)
