@@ -19,7 +19,7 @@ ABOUT ME
 一開始建立這個Repository的目的只是因為上課需要用到，要儲存上課的筆記和繳交作業，一開始當然很不願意覺得這些東西好麻煩，不過漸漸看到自己的作品在裡面累積起來，有深刻的體會這學期自己的寫程式能力成長不少，也感覺到自己對於學習的意願提高很多，以前真的太廢了，希望這個Repository可以跟著我的人生成長繼續成長茁壯！！
 
 
-code
+Code
 ---
 
 * [CodeSignal](https://github.com/06170230/lulu/tree/master/Codesignal)
