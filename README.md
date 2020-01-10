@@ -33,12 +33,12 @@ HomeWork
 
 | HW        | LINK           | 
 | :---: | :---: | 
-| HW1 | [QuickSort](https://github.com/Teresakao0421/teresa/tree/master/HW1) |
-| HW2 | [MergeSort](https://github.com/Teresakao0421/teresa/tree/master/merge%20sort)&[HeapSort](https://github.com/Teresakao0421/teresa/tree/master/heap%20sort)|
-| HW3 | [BinarySearchTree](https://github.com/Teresakao0421/teresa/tree/master/HW3) | 
-| HW4 | [HashTable](https://github.com/Teresakao0421/teresa/tree/master/HW4) |
-| HW5 | [BreadthFristSearch+DepthFristSearch](https://github.com/Teresakao0421/teresa/tree/master/HW5) |
-| HW6 | [MinimumSpanningTree+ShortestPath](https://github.com/Teresakao0421/teresa/tree/master/HW6) |
+| HW1 | [QuickSort](https://github.com/06170230/lulu/tree/master/HW1) |
+| HW2 | [MergeSort](https://github.com/06170230/lulu/tree/master/HW2)&[HeapSort](https://github.com/06170230/lulu/tree/master/HW2)|
+| HW3 | [BinarySearchTree](https://github.com/06170230/lulu/tree/master/HW3) | 
+| HW4 | [HashTable](https://github.com/06170230/lulu/tree/master/HW4) |
+| HW5 | [BreadthFristSearch+DepthFristSearch](https://github.com/06170230/lulu/tree/master/HW5) |
+| HW6 | [MinimumSpanningTree+ShortestPath](https://github.com/06170230/lulu/tree/master/HW6) |
 
 
 課程內容
